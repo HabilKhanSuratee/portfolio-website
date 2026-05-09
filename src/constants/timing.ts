@@ -1,0 +1,13 @@
+export const TIMING = {
+  CURSOR_BLINK_MS:      530,
+  BOOT_EXIT_MS:         650,
+  READY_STATE_MS:       2200,
+  PROGRESS_STEP_MS:     28,
+  SKILL_DELAY_STEP_MS:  80,
+  SKILL_COUNT_BASE_MS:  1200,
+  SKILL_BAR_DURATION_MS: 1300,
+  CMD_FOCUS_MS:         80,
+  CMD_EXIT_CLOSE_MS:    700,
+  REBOOT_DELAY_MS:      1200,
+  TIME_UPDATE_MS:       37,
+} as const;
