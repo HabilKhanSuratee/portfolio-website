@@ -30,30 +30,42 @@ export const TERMINAL_SKILLS = [
 
 export const PROJECT_CARDS = [
   {
-    title: 'Neuro-Net Vis Interface',
-    type:  'AI Frontend',
-    desc:  'A real-time WebGL visualization engine for large scale neural network activations. Built for AI researchers to map internal layer geometries.',
-    tags:  ['React', 'Three.js', 'Python', 'WebSocket'],
-    color: 'cyan',
-  },
-  {
-    title: 'Rogue Trading Bot v2',
-    type:  'Autonomous Agent',
-    desc:  'Reinforcement learning agent optimized for high-frequency algorithmic trading in synthetic environments. Yields 22% better baseline returns.',
-    tags:  ['PyTorch', 'Redis', 'C++', 'Docker'],
+    title: 'Aerial Mosquitto Breeding Ground Detection via YOLO',
+    type:  'Computer Vision / ML',
+    desc:  'Computer vision project detecting Mosquitto Breeding Ground (MBG) through drone imagery using YOLO object detection. Trained on aerial datasets to enable early-stage mosquitto linked disease control.',
+    tags:  ['Python', 'YOLO', 'OpenCV', 'Drone Imagery', 'Object Detection', 'Geospatial Analysis', 'Public health'],
     color: 'green',
+    url:   'https://github.com/HabilKhanSuratee/MBG_YOLO',
   },
   {
-    title: 'SynthData Generator',
-    type:  'Generative AI Tool',
-    desc:  'Enterprise-grade synthetic data generation pipeline. Bypasses PII restrictions by training diffusion models on anonymized baseline datasets.',
-    tags:  ['Python', 'HuggingFace', 'FastAPI'],
+    title: 'Vector Space IR Engine',
+    type:  'Information Retrieval',
+    desc:  'Document retrieval engine built on the Vector Space Model with TF-IDF weighting and cosine similarity ranking. Supports full-text search across document corpora with ranked result output.',
+    tags:  ['Python', 'TF-IDF', 'Cosine Similarity', 'NLP', 'Vector Space Model'],
+    color: 'cyan',
+    url:   'https://github.com/HabilKhanSuratee/vector-space-ir-engine',
+  },
+  
+  {
+    title: 'CV Steganography Engine',
+    type:  'Computer Vision / Security',
+    desc:  'Image watermarking tool combining SIFT keypoint detection with LSB steganography for invisible watermark embedding, extraction, and tamper detection. Served via a Flask API.',
+    tags:  ['Python', 'OpenCV', 'SIFT', 'LSB Steganography', 'Flask', 'Watermarking', 'Image Forensics', 'GenAi detection'],
     color: 'magenta',
+    url:   'https://github.com/HabilKhanSuratee/computer_vision_stenography',
+  },
+  {
+    title: 'Clothing Manufacturer Portal',
+    type:  'Full-Stack Web App',
+    desc:  'B2B e-commerce platform tailored for clothing manufacturers. Features product catalogue management, bulk order workflows, and a responsive storefront built in TypeScript.',
+    tags:  ['TypeScript', 'React', 'Node.js', 'E-Commerce', 'B2B'],
+    color: 'green',
+    url:   'https://habilkhansuratee.github.io/website-clothing/',
   },
 ];
 
 export const projectBorderClass = (color: string): string =>
-  ({ cyan: 'pixel-border-cyan', magenta: 'pixel-border-magenta' }[color] ?? 'pixel-border');
+  ({ cyan: 'pixel-border-cyan', magenta: 'pixel-border-magenta', green: 'pixel-border' }[color] ?? 'pixel-border');
 
 export const projectColorClass = (color: string): string =>
   ({

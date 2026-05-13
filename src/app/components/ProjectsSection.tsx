@@ -26,13 +26,16 @@ export const ProjectsSection: React.FC = () => (
             </div>
           </div>
           <div className="md:w-48 flex items-center justify-center border-l border-gray-800 md:pl-6 pt-4 md:pt-0 border-t md:border-t-0">
-            <button
+            <a
+              href={proj.url}
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-full py-4 bg-gray-900 hover:bg-white hover:text-black transition-colors flex flex-col items-center justify-center gap-2"
               style={FONTS.title}
             >
               <Terminal className="w-6 h-6" />
               <span className="text-xs">EXECUTE</span>
-            </button>
+            </a>
           </div>
         </div>
       ))}
