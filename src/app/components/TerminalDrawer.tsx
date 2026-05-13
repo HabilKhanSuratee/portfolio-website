@@ -34,6 +34,7 @@ function helpOutput(): Line {
       <div className="text-[#ff00ff] mb-2">// AVAILABLE COMMANDS ──────────────</div>
       {([
         ['whoami',        'Display operator profile'],
+        ['cd <path>',     'Change directory'],
         ['ls projects',   'List archived project files'],
         ['ls skills',     'List installed tech stack'],
         ['cat about.txt', 'Read the about file'],
@@ -62,9 +63,9 @@ function whoamiOutput(): Line {
       <div>│  <span className="text-[#00ffff]">NAME     </span> Habil</div>
       <div>│  <span className="text-[#00ffff]">ROLE     </span> Software Engineer & AI Consultant</div>
       <div>│  <span className="text-[#00ffff]">STATUS   </span> <span className="text-[#00ff41]">ONLINE ●</span></div>
-      <div>│  <span className="text-[#00ffff]">FOCUS    </span> LLMs · Agentic Systems · Data Strategy</div>
+      <div>│  <span className="text-[#00ffff]">FOCUS    </span> Agentic systems · Computer Vision · Full-stack development</div>
       <div>│  <span className="text-[#00ffff]">CLEARANCE</span> LEVEL_5 <span className="text-gray-600">// CLASSIFIED</span></div>
-      <div>│  <span className="text-[#00ffff]">LOCATION </span> <span className="text-gray-500">ENCRYPTED</span></div>
+      <div>│  <span className="text-[#00ffff]">LOCATION </span> Singapore / Indonesia </div>
       <div className="text-[#ff00ff]">└────────────────────────────────────</div>
     </div>
   ));
@@ -103,9 +104,13 @@ function aboutOutput(): Line {
     <div className="pl-2 space-y-1">
       <div className="text-gray-600 mb-1">// about.txt — 1 file, 128 bytes</div>
       <p className="text-gray-300 max-w-lg leading-relaxed">
-        Merging cutting-edge software development with advanced artificial intelligence.
-        Building high-performance systems and providing strategic AI consultancy
-        for the dark net and beyond.
+         Software engineer specialising in <span className="text-[#00ff41]">AI/ML</span>, <span className="text-[#ff+00ff]">
+          computer vision</span>, and <span className="text-[#00ffff]">full-stack development</span>.
+          I build end-to-end systems, from training YOLO models on drone imagery for public health detection,
+          to engineering LSB steganography pipelines and deploying them via REST APIs.
+        On the web side, I deliver production-ready TypeScript applications and am actively developing
+       with the <span className="text-[#ff00ff]">Anthropic SDK</span> to build LLM-powered tools.
+       I turn complex problems into clean, deployable solutions.
       </p>
     </div>
   ));
@@ -115,9 +120,9 @@ function contactOutput(): Line {
   return mkLine('output', (
     <div className="pl-2 space-y-1">
       <div className="text-[#ff00ff] mb-1">// CONTACT_CHANNELS ───────────────</div>
-      <div><span className="text-[#00ffff]">GITHUB   </span>  <span className="text-[#00ff41]">github.com/habil</span></div>
-      <div><span className="text-[#00ffff]">LINKEDIN </span>  <span className="text-[#00ff41]">linkedin.com/in/habil</span></div>
-      <div><span className="text-[#00ffff]">EMAIL    </span>  <span className="text-[#00ff41]">habil@domain.dev</span></div>
+      <div><span className="text-[#00ffff]">GITHUB   </span>  <a href="https://github.com/HabilKhanSuratee" target="_blank" rel="noopener noreferrer" className="text-[#00ff41] hover:underline hover:text-white transition-colors">https://github.com/HabilKhanSuratee</a></div>
+      <div><span className="text-[#00ffff]">LINKEDIN </span>  <a href="https://www.linkedin.com/in/habil-khan-suratee/" target="_blank" rel="noopener noreferrer" className="text-[#00ff41] hover:underline hover:text-white transition-colors">https://www.linkedin.com/in/habil-khan-suratee/</a></div>
+      <div><span className="text-[#00ffff]">EMAIL    </span>  <a href="https://mail.google.com/mail/?view=cm&to=habilkhansuratee@gmail.com" target="_blank" rel="noopener noreferrer" className="text-[#00ff41] hover:underline hover:text-white transition-colors">habilkhansuratee@gmail.com</a></div>
       <div className="text-gray-600 mt-1">// Encryption: PGP recommended</div>
     </div>
   ));
@@ -195,6 +200,26 @@ function matrixOutput(): Line {
   ));
 }
 
+function cdOutput(path: string): Line {
+  const p = path.trim();
+  if (!p || p === '~' || p === '/home/habil') {
+    return mkLine('output', <span className="text-[#00ffff]">// ~  /home/habil</span>);
+  }
+  if (p === '..') {
+    return mkLine('output', <span className="text-[#00ffff]">// ~  /home</span>);
+  }
+  if (p === '/' || p.startsWith('/etc') || p.startsWith('/root') || p.startsWith('/sys')) {
+    return mkLine('error', (
+      <span>
+        <span className="text-red-400">cd: {p}:</span> Permission denied.{' '}
+        <span className="text-gray-600">// RESTRICTED ZONE</span>
+      </span>
+    ));
+  }
+  const resolved = p.startsWith('/') ? p : `/home/habil/${p}`;
+  return mkLine('output', <span className="text-[#00ffff]">// ~  {resolved}</span>);
+}
+
 function lsRootOutput(): Line {
   return mkLine('output', (
     <div className="pl-2 space-y-0.5 text-xs">
@@ -251,6 +276,11 @@ function buildResponse(cmd: string, cmdHistory: string[]): Line[] | 'clear' | 'e
   const lower = raw.toLowerCase();
 
   if (!raw) return [];
+
+  if (lower.startsWith('cd')) {
+    const path = raw.slice(2).trim();
+    return [cdOutput(path)];
+  }
 
   const handler = COMMANDS[lower];
   if (handler) return handler(cmdHistory);

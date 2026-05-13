@@ -20,9 +20,10 @@ export const SKILLS: Skill[] = [
 
 
 export const TERMINAL_PROJECTS = [
-  { name: 'MBG-YOLO/',                type: 'Computer Vision',      color: '#00ff41' },
-  { name: 'vector-space-ir-engine/',   type: 'Information Retrieval', color: '#00ffff' },
-  { name: 'cv-steganography-engine/',  type: 'CV / Security',         color: '#ff00ff' },
+  { name: 'MBG-YOLO/',                  type: 'Computer Vision',      color: '#00ff41' },
+  { name: 'vector-space-ir-engine/',     type: 'Information Retrieval', color: '#00ffff' },
+  { name: 'cv-steganography-engine/',    type: 'CV / Security',         color: '#ff00ff' },
+  { name: 'clothing-manufacturer-portal/', type: 'Full-Stack Web App', color: '#00ff41' },
 ];
 
 export const TERMINAL_SKILLS = [
@@ -79,21 +80,21 @@ export const CAPABILITY_CARDS: CapabilityCard[] = [
     title:  'AI & Machine Learning',
     iconKey: 'brain',
     color:   'green',
-    desc:    'Real-world model training and deployment — from YOLO-based aerial detection pipelines to TF-IDF ranked retrieval systems. Full lifecycle experience: dataset prep, training, evaluation, and inference.',
+    desc:    'Real-world model training and deployment, from YOLO-based aerial detection pipelines to TF-IDF ranked retrieval systems. Full lifecycle experience: dataset prep, training, evaluation, and inference.',
     tags:    ['YOLO', 'PyTorch', 'TensorFlow', 'Object Detection', 'Model Training'],
   },
   {
     title:  'Computer Vision',
     iconKey: 'eye',
     color:   'magenta',
-    desc:    'Low-level image processing through to applied CV systems. Built SIFT keypoint detection, LSB steganography pipelines, and drone imagery classifiers — served via Flask REST APIs.',
+    desc:    'Low-level image processing through to applied CV systems. Built SIFT keypoint detection, LSB steganography pipelines, and drone imagery classifiers, served via Flask REST APIs.',
     tags:    ['OpenCV', 'SIFT', 'Steganography', 'Image Processing', 'Flask'],
   },
   {
     title:  'Full-Stack Engineering',
     iconKey: 'layers',
     color:   'cyan',
-    desc:    'End-to-end web application development — React/TypeScript frontends, Node.js backends, and REST APIs. Delivered a production B2B clothing portal with catalogue management and bulk-order workflows.',
+    desc:    'End-to-end web application development, React/TypeScript frontends, Node.js backends, and REST APIs. Delivered a production B2B clothing portal with catalogue management and bulk-order workflows.',
     tags:    ['TypeScript', 'React', 'Node.js', 'REST APIs', 'Flask'],
   },
 ];

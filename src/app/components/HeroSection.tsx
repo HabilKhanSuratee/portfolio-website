@@ -84,6 +84,14 @@ export const HeroSection: React.FC = () => (
           COMMS
         </a>
       </div>
+
+      <p className="text-lg md:text-xl max-w-2xl text-gray-300 leading-relaxed pt-2">
+        I am a Software engineer specialising in <span className="text-[#00ff41]">AI/ML</span>, <span className="text-[#ff00ff]">computer vision</span>, and <span className="text-[#00ffff]">full-stack development</span>.
+        I build end-to-end systems, from training YOLO models on drone imagery for public health detection,
+        to engineering LSB steganography pipelines and deploying them via REST APIs.
+        On the web end, I deliver production-ready TypeScript applications and am actively developing
+        with the <span className="text-[#ff00ff]">Anthropic SDK</span> to build LLM-powered tools.
+      </p>
     </motion.div>
 
     <motion.div
