@@ -13,7 +13,7 @@ export const SKILLS: Skill[] = [
   { name: 'OpenCV',        cat: 'CV',       pct: 83, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
   { name: 'React/Next',    cat: 'Frontend', pct: 61, color: '#00ffff', glow: 'rgba(0,255,255,0.5)' },
   { name: 'Flask',         cat: 'Backend',  pct: 66, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
-  { name: 'pytest',        cat: 'Testing',  pct: 89, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
+  { name: 'Pytest',        cat: 'Testing',  pct: 89, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
   { name: 'Anthropic SDK', cat: 'LLM',      pct: 47, color: '#ff00ff', glow: 'rgba(255,0,255,0.5)' },
   { name: 'Docker',        cat: 'DevOps',   pct: 50, color: '#ff00ff', glow: 'rgba(255,0,255,0.5)' }
 ];
