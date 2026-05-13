@@ -7,7 +7,7 @@ export const ProjectsSection: React.FC = () => (
   <section id="projects" className="space-y-12">
     <div className="flex items-center gap-4 border-b-2 border-[#00ffff] pb-4">
       <Code className="w-10 h-10 text-[#00ffff]" />
-      <h2 style={FONTS.title} className="text-2xl md:text-4xl text-white uppercase">ARCHIVE_PROJECTS</h2>
+      <h2 style={FONTS.title} className="text-base md:text-4xl text-white uppercase">ARCHIVE_PROJECTS</h2>
     </div>
 
     <div className="space-y-8">

@@ -43,12 +43,12 @@ export const HeroSection: React.FC = () => (
       transition={{ duration: 0.5 }}
       className="flex-1 space-y-6"
     >
-      <div className="inline-block px-3 py-1 bg-[#00ff41]/20 border border-[#00ff41] text-[#00ff41] text-xl uppercase mb-2 shadow-[0_0_10px_rgba(0,255,65,0.5)] animate-blink">
+      <div className="inline-block px-3 py-1 bg-[#00ff41]/20 border border-[#00ff41] text-[#00ff41] text-base md:text-xl uppercase mb-2 shadow-[0_0_10px_rgba(0,255,65,0.5)] animate-blink">
         Status: Online
       </div>
 
       <div
-        className="text-3xl md:text-5xl text-[#00ff41] font-bold flex items-center flex-wrap gap-2 min-h-[3rem] md:min-h-[4rem] mb-2"
+        className="text-2xl md:text-5xl text-[#00ff41] font-bold flex items-center flex-wrap gap-2 min-h-[3rem] md:min-h-[4rem] mb-2"
         style={FONTS.code}
       >
         <span className="text-[#ff00ff]">&gt;</span>
@@ -56,29 +56,29 @@ export const HeroSection: React.FC = () => (
         <span className="inline-block w-4 md:w-6 h-8 md:h-12 bg-[#00ff41] animate-pulse ml-1" />
       </div>
 
-      <h1 style={FONTS.title} className="text-3xl md:text-5xl lg:text-6xl text-white glitch leading-tight" data-text="SOFTWARE ENGINEER">
+      <h1 style={FONTS.title} className="text-xl sm:text-2xl md:text-5xl lg:text-6xl text-white glitch leading-tight" data-text="SOFTWARE ENGINEER">
         SOFTWARE ENGINEER
       </h1>
-      <h2 style={FONTS.title} className="text-xl md:text-2xl text-[#ff00ff] mt-2 mb-8">
+      <h2 style={FONTS.title} className="text-sm sm:text-base md:text-2xl text-[#ff00ff] mt-2 mb-8">
         &gt; AI CONSULTANT & BUILDER
       </h2>
 
-      <p className="text-2xl md:text-3xl max-w-2xl text-gray-300 leading-relaxed">
+      <p className="text-xl md:text-3xl max-w-2xl text-gray-300 leading-relaxed">
         Building real-world AI applications and computer vision systems,
-        Turning complex problem into simple solutions 
+        Turning complex problem into simple solutions
       </p>
 
-      <div className="pt-6 flex gap-4">
+      <div className="pt-6 flex flex-col sm:flex-row gap-4">
         <a
           href="#projects"
-          className="px-6 py-3 bg-[#00ff41] text-black text-2xl font-bold uppercase hover:bg-white transition-colors flex items-center gap-2"
+          className="px-6 py-3 bg-[#00ff41] text-black text-base md:text-2xl font-bold uppercase hover:bg-white transition-colors flex items-center justify-center gap-2"
           style={FONTS.title}
         >
-          INIT_PROJECTS <ChevronRight className="w-6 h-6" />
+          INIT_PROJECTS <ChevronRight className="w-5 h-5 md:w-6 md:h-6" />
         </a>
         <a
           href="#contact"
-          className="px-6 py-3 border-2 border-[#00ff41] text-[#00ff41] text-2xl font-bold uppercase hover:bg-[#00ff41]/20 transition-colors"
+          className="px-6 py-3 border-2 border-[#00ff41] text-[#00ff41] text-base md:text-2xl font-bold uppercase hover:bg-[#00ff41]/20 transition-colors text-center"
           style={FONTS.title}
         >
           COMMS

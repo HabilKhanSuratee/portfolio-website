@@ -37,7 +37,7 @@ export const CapabilitySection: React.FC = () => (
   <section id="disciplines" className="space-y-12">
     <div className="flex items-center gap-4 border-b-2 border-[#ff00ff] pb-4">
       <Cpu className="w-10 h-10 text-[#ff00ff]" />
-      <h2 style={FONTS.title} className="text-2xl md:text-4xl text-white uppercase">CORE_DISCIPLINES</h2>
+      <h2 style={FONTS.title} className="text-base md:text-4xl text-white uppercase">CORE_DISCIPLINES</h2>
     </div>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

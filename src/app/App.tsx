@@ -60,7 +60,7 @@ export default function App() {
         <section id="skills" className="space-y-12">
           <div className="flex items-center gap-4 border-b-2 border-[#00ff41] pb-4">
             <Cpu className="w-10 h-10 text-[#00ff41]" />
-            <h2 style={FONTS.title} className="text-2xl md:text-4xl text-white uppercase">TECH_STACK</h2>
+            <h2 style={FONTS.title} className="text-base md:text-4xl text-white uppercase">TECH_STACK</h2>
           </div>
           <SkillBars />
         </section>

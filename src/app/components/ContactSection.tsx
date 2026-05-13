@@ -4,7 +4,7 @@ import { FONTS } from '../../constants/theme';
 
 export const ContactSection: React.FC = () => (
   <section id="contact" className="py-20 border-t-4 border-[#00ff41] mt-20 text-center">
-    <h2 style={FONTS.title} className="text-3xl md:text-5xl text-white mb-8">ESTABLISH_CONNECTION</h2>
+    <h2 style={FONTS.title} className="text-base md:text-5xl text-white mb-8">ESTABLISH_CONNECTION</h2>
     <p className="text-2xl text-gray-400 max-w-2xl mx-auto mb-12">
       My inbox is open for new opportunities, consultancy queries, or collaborations on building
       the next generation of AI systems.
