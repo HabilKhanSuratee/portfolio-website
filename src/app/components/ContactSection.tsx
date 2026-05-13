@@ -32,7 +32,7 @@ export const ContactSection: React.FC = () => (
     </div>
 
     <div className="text-sm text-gray-600" style={FONTS.code}>
-      © 2077 // BUILT_WITH_REACT // CONNECTION_SECURE
+      © 2026 // BUILT_WITH_REACT // CONNECTION_SECURE
     </div>
   </section>
 );

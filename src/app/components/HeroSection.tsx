@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronRight } from 'lucide-react';
+import { ChevronRight, Download } from 'lucide-react';
 import { motion } from 'motion/react';
 import { FONTS } from '../../constants/theme';
 import { PixelImageRenderer } from './PixelImageRenderer';
@@ -90,7 +90,7 @@ export const HeroSection: React.FC = () => (
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="flex-shrink-0 relative"
+      className="flex-shrink-0 relative flex flex-col items-center gap-4"
     >
       <div className="w-64 h-64 md:w-80 md:h-80 pixel-border bg-[#111] flex items-center justify-center relative overflow-hidden group">
         <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px] pointer-events-none z-10 opacity-50" />
@@ -107,6 +107,16 @@ export const HeroSection: React.FC = () => (
           ID_0x7F8
         </div>
       </div>
+
+      <a
+        href="/cv.pdf"
+        download="Habil_Khan_CV.pdf"
+        className="w-full py-3 border-2 border-[#00ff41] text-[#00ff41] hover:bg-[#00ff41] hover:text-black transition-colors flex items-center justify-center gap-2"
+        style={FONTS.title}
+      >
+        <Download className="w-5 h-5" />
+        <span className="text-sm">PULL_CV.PDF</span>
+      </a>
     </motion.div>
   </section>
 );
