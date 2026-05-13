@@ -25,15 +25,15 @@ export const ProjectsSection: React.FC = () => (
               ))}
             </div>
           </div>
-          <div className="md:w-48 flex items-center justify-center border-l border-gray-800 md:pl-6 pt-4 md:pt-0 border-t md:border-t-0">
+          <div className="md:w-48 flex items-center justify-center md:border-l border-gray-800 md:pl-6 pt-4 md:pt-0 border-t md:border-t-0">
             <a
               href={proj.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full py-4 bg-gray-900 hover:bg-white hover:text-black transition-colors flex flex-col items-center justify-center gap-2"
+              className="w-full py-3 md:py-4 bg-gray-900 hover:bg-white hover:text-black transition-colors flex flex-row md:flex-col items-center justify-center gap-3 md:gap-2"
               style={FONTS.title}
             >
-              <Terminal className="w-6 h-6" />
+              <Terminal className="w-5 h-5 md:w-6 md:h-6" />
               <span className="text-xs">EXECUTE</span>
             </a>
           </div>
