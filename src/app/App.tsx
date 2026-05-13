@@ -6,7 +6,7 @@ import { BootScreen } from './components/BootScreen';
 import { SkillBars } from './components/SkillBars';
 import { Navbar } from './components/Navbar';
 import { HeroSection } from './components/HeroSection';
-import { AIConsultancySection } from './components/AIConsultancySection';
+import { CapabilitySection } from './components/CapabilitySection';
 import { ProjectsSection } from './components/ProjectsSection';
 import { ContactSection } from './components/ContactSection';
 import { FONTS } from '../constants/theme';
@@ -53,7 +53,7 @@ export default function App() {
       <main className="max-w-6xl mx-auto px-4 pt-32 relative z-10 space-y-32">
         <HeroSection />
 
-        <AIConsultancySection />
+        <CapabilitySection />
 
         <section id="skills" className="space-y-12">
           <div className="flex items-center gap-4 border-b-2 border-[#00ff41] pb-4">

@@ -11,19 +11,19 @@ export const ContactSection: React.FC = () => (
     </p>
 
     <div className="flex justify-center gap-6 mb-12">
-      <a href="#" className="p-4 border-2 border-[#00ff41] text-[#00ff41] hover:bg-[#00ff41] hover:text-black transition-all group relative">
+      <a href="https://github.com/HabilKhanSuratee" target="_blank" rel="noopener noreferrer" className="p-4 border-2 border-[#00ff41] text-[#00ff41] hover:bg-[#00ff41] hover:text-black transition-all group relative">
         <Github className="w-8 h-8" />
         <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-black border border-[#00ff41] text-[#00ff41] px-2 py-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style={FONTS.code}>
           // github
         </span>
       </a>
-      <a href="#" className="p-4 border-2 border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff] hover:text-black transition-all group relative">
+      <a href="https://www.linkedin.com/in/habil-khan-suratee/" target="_blank" rel="noopener noreferrer" className="p-4 border-2 border-[#00ffff] text-[#00ffff] hover:bg-[#00ffff] hover:text-black transition-all group relative">
         <Linkedin className="w-8 h-8" />
         <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-black border border-[#00ffff] text-[#00ffff] px-2 py-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style={FONTS.code}>
           // linkedin
         </span>
       </a>
-      <a href="#" className="p-4 border-2 border-[#ff00ff] text-[#ff00ff] hover:bg-[#ff00ff] hover:text-black transition-all group relative">
+      <a href="https://mail.google.com/mail/?view=cm&to=habilkhansuratee@gmail.com" target="_blank" rel="noopener noreferrer" className="p-4 border-2 border-[#ff00ff] text-[#ff00ff] hover:bg-[#ff00ff] hover:text-black transition-all group relative">
         <Mail className="w-8 h-8" />
         <span className="absolute -top-10 left-1/2 -translate-x-1/2 bg-black border border-[#ff00ff] text-[#ff00ff] px-2 py-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap" style={FONTS.code}>
           // email

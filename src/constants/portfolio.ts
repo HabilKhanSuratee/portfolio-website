@@ -7,25 +7,27 @@ export interface Skill {
 }
 
 export const SKILLS: Skill[] = [
-  { name: 'Python',     cat: 'Core',     pct: 95, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
-  { name: 'TypeScript', cat: 'Core',     pct: 91, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
-  { name: 'PyTorch',    cat: 'AI/ML',    pct: 88, color: '#ff00ff', glow: 'rgba(255,0,255,0.5)' },
-  { name: 'TensorFlow', cat: 'AI/ML',    pct: 82, color: '#ff00ff', glow: 'rgba(255,0,255,0.5)' },
-  { name: 'React/Next', cat: 'Frontend', pct: 90, color: '#00ffff', glow: 'rgba(0,255,255,0.5)' },
-  { name: 'Node.js',    cat: 'Backend',  pct: 85, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
-  { name: 'Docker/K8s', cat: 'DevOps',   pct: 80, color: '#ff00ff', glow: 'rgba(255,0,255,0.5)' },
-  { name: 'CUDA',       cat: 'Compute',  pct: 76, color: '#00ffff', glow: 'rgba(0,255,255,0.5)' },
+  { name: 'Python',        cat: 'Core',     pct: 95, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
+  { name: 'TypeScript',    cat: 'Core',     pct: 88, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
+  { name: 'PyTorch',       cat: 'AI/ML',    pct: 85, color: '#ff00ff', glow: 'rgba(255,0,255,0.5)' },
+  { name: 'OpenCV',        cat: 'CV',       pct: 83, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
+  { name: 'React/Next',    cat: 'Frontend', pct: 61, color: '#00ffff', glow: 'rgba(0,255,255,0.5)' },
+  { name: 'Flask',         cat: 'Backend',  pct: 66, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
+  { name: 'pytest',        cat: 'Testing',  pct: 89, color: '#00ff41', glow: 'rgba(0,255,65,0.5)'  },
+  { name: 'Anthropic SDK', cat: 'LLM',      pct: 47, color: '#ff00ff', glow: 'rgba(255,0,255,0.5)' },
+  { name: 'Docker',        cat: 'DevOps',   pct: 50, color: '#ff00ff', glow: 'rgba(255,0,255,0.5)' }
 ];
 
+
 export const TERMINAL_PROJECTS = [
-  { name: 'neuro-net-vis/',        type: 'AI Frontend',        color: '#00ffff' },
-  { name: 'rogue-trading-bot-v2/', type: 'Autonomous Agent',   color: '#00ff41' },
-  { name: 'synthdata-generator/',  type: 'Generative AI Tool', color: '#ff00ff' },
+  { name: 'MBG-YOLO/',                type: 'Computer Vision',      color: '#00ff41' },
+  { name: 'vector-space-ir-engine/',   type: 'Information Retrieval', color: '#00ffff' },
+  { name: 'cv-steganography-engine/',  type: 'CV / Security',         color: '#ff00ff' },
 ];
 
 export const TERMINAL_SKILLS = [
-  'Python', 'TypeScript', 'PyTorch', 'TensorFlow',
-  'React/Next', 'Node.js', 'Docker/K8s', 'CUDA',
+  'Python', 'TypeScript', 'PyTorch', 'OpenCV',
+  'React/Next', 'Flask', 'pytest', 'Anthropic SDK', 'Docker',
 ];
 
 export const PROJECT_CARDS = [
@@ -61,6 +63,38 @@ export const PROJECT_CARDS = [
     tags:  ['TypeScript', 'React', 'Node.js', 'E-Commerce', 'B2B'],
     color: 'green',
     url:   'https://habilkhansuratee.github.io/website-clothing/',
+  },
+];
+
+export interface CapabilityCard {
+  title: string;
+  iconKey: 'brain' | 'eye' | 'layers';
+  color: 'green' | 'magenta' | 'cyan';
+  desc: string;
+  tags: string[];
+}
+
+export const CAPABILITY_CARDS: CapabilityCard[] = [
+  {
+    title:  'AI & Machine Learning',
+    iconKey: 'brain',
+    color:   'green',
+    desc:    'Real-world model training and deployment — from YOLO-based aerial detection pipelines to TF-IDF ranked retrieval systems. Full lifecycle experience: dataset prep, training, evaluation, and inference.',
+    tags:    ['YOLO', 'PyTorch', 'TensorFlow', 'Object Detection', 'Model Training'],
+  },
+  {
+    title:  'Computer Vision',
+    iconKey: 'eye',
+    color:   'magenta',
+    desc:    'Low-level image processing through to applied CV systems. Built SIFT keypoint detection, LSB steganography pipelines, and drone imagery classifiers — served via Flask REST APIs.',
+    tags:    ['OpenCV', 'SIFT', 'Steganography', 'Image Processing', 'Flask'],
+  },
+  {
+    title:  'Full-Stack Engineering',
+    iconKey: 'layers',
+    color:   'cyan',
+    desc:    'End-to-end web application development — React/TypeScript frontends, Node.js backends, and REST APIs. Delivered a production B2B clothing portal with catalogue management and bulk-order workflows.',
+    tags:    ['TypeScript', 'React', 'Node.js', 'REST APIs', 'Flask'],
   },
 ];
 

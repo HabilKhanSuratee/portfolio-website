@@ -17,7 +17,7 @@ export const Navbar: React.FC<NavbarProps> = ({ time }) => (
       </div>
       <div className="hidden md:flex gap-6 text-[#00ffff] hover:text-[#00ff41]">
         <a href="#about"          className="hover:text-[#00ff41] transition-colors">[ ABOUT ]</a>
-        <a href="#ai-consultancy" className="hover:text-[#ff00ff] transition-colors">[ AI_LAB ]</a>
+        <a href="#disciplines" className="hover:text-[#ff00ff] transition-colors">[ DISCIPLINES ]</a>
         <a href="#skills"         className="hover:text-[#00ff41] transition-colors">[ SKILLS ]</a>
         <a href="#projects"       className="hover:text-[#00ffff] transition-colors">[ ARCHIVE ]</a>
       </div>
