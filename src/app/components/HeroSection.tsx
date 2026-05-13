@@ -36,7 +36,7 @@ const ScrambleText = ({ text }: { text: string }) => {
 };
 
 export const HeroSection: React.FC = () => (
-  <section id="about" className="flex flex-col-reverse md:flex-row items-center justify-between gap-12">
+  <section id="about" className="flex flex-col md:flex-row items-center justify-between gap-12">
     <motion.div
       initial={{ opacity: 0, x: -50 }}
       animate={{ opacity: 1, x: 0 }}
@@ -68,6 +68,31 @@ export const HeroSection: React.FC = () => (
         Turning complex problem into simple solutions
       </p>
 
+      {/* Mobile-only image */}
+      <div className="md:hidden flex flex-col items-center gap-4 py-2">
+        <div className="w-64 h-64 pixel-border bg-[#111] flex items-center justify-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px] pointer-events-none z-10 opacity-50" />
+          <div className="absolute top-2 left-2 flex gap-1 z-20 pointer-events-none">
+            <div className="w-3 h-3 bg-red-500" />
+            <div className="w-3 h-3 bg-yellow-500" />
+            <div className="w-3 h-3 bg-green-500" />
+          </div>
+          <PixelImageRenderer />
+          <div className="absolute bottom-2 right-2 text-sm text-[#00ff41]/50 z-20 pointer-events-none" style={FONTS.code}>
+            ID_0x7F8
+          </div>
+        </div>
+        <a
+          href="/cv.pdf"
+          download="Habil_Khan_CV.pdf"
+          className="w-full py-3 border-2 border-[#00ff41] text-[#00ff41] hover:bg-[#00ff41] hover:text-black transition-colors flex items-center justify-center gap-2"
+          style={FONTS.title}
+        >
+          <Download className="w-5 h-5" />
+          <span className="text-sm">PULL_CV.PDF</span>
+        </a>
+      </div>
+
       <div className="pt-6 flex flex-col sm:flex-row gap-4">
         <a
           href="#projects"
@@ -98,7 +123,7 @@ export const HeroSection: React.FC = () => (
       initial={{ opacity: 0, scale: 0.8 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="flex-shrink-0 relative flex flex-col items-center gap-4"
+      className="hidden md:flex flex-shrink-0 relative flex-col items-center gap-4"
     >
       <div className="w-64 h-64 md:w-80 md:h-80 pixel-border bg-[#111] flex items-center justify-center relative overflow-hidden group">
         <div className="absolute inset-0 bg-[linear-gradient(transparent_50%,rgba(0,0,0,0.5)_50%)] bg-[length:100%_4px] pointer-events-none z-10 opacity-50" />
