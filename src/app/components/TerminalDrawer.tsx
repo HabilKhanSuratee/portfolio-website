@@ -381,7 +381,7 @@ export const TerminalDrawer: React.FC = () => {
         mkLine('output', <span className="text-[#ff00ff]">Clearing session cache... resetting boot flag...</span>),
       ]);
       setTimeout(() => {
-        try { localStorage.removeItem('cyberboot_v1'); } catch {}
+        try { localStorage.setItem('show_boot', '1'); } catch {}
         window.location.reload();
       }, TIMING.REBOOT_DELAY_MS);
       return;

@@ -15,14 +15,16 @@ import { TIMING } from '../constants/timing';
 export default function App() {
   const [time, setTime] = useState('');
   const [bootDone, setBootDone] = useState<boolean>(() => {
-    try { return localStorage.getItem('cyberboot_v1') === '1'; }
-    catch { return false; }
+    try {
+      if (localStorage.getItem('show_boot') === '1') {
+        localStorage.removeItem('show_boot');
+        return false;
+      }
+    } catch {}
+    return true;
   });
 
-  const handleBootComplete = () => {
-    try { localStorage.setItem('cyberboot_v1', '1'); } catch {}
-    setBootDone(true);
-  };
+  const handleBootComplete = () => setBootDone(true);
 
   useEffect(() => {
     const updateTime = () => {
